@@ -1,0 +1,181 @@
+@import './vars.scss';
+.popular {
+	margin-bottom: 152px;
+	&-header {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 60px;
+		&__title {
+			color: $black;
+			font-family: Euclid Circular A;
+			font-size: 50px;
+			font-style: normal;
+			font-weight: 500;
+			line-height: normal;
+
+			@media screen and (max-width: $sm) {
+				font-size: 32px;
+				line-height: 35.2px;
+			}
+		}
+
+		&__btn {
+			border: none;
+			color: $white;
+			font-family: Euclid Circular A;
+			font-size: 18px;
+			font-style: normal;
+			font-weight: 500;
+			line-height: 23.4px;
+
+			display: flex;
+			height: 60px;
+			padding: 5px 5px 5px 30px;
+			justify-content: center;
+			align-items: center;
+			gap: 25px;
+			border-radius: 15px;
+			background: linear-gradient(96deg, #dd3197 0%, #822faf 101.4%);
+
+			@media screen and (max-width: $sm) {
+				display: none;
+			}
+
+			&-arrow {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				width: 50px;
+				height: 50px;
+				flex-shrink: 0;
+
+				border-radius: 10px;
+				background: $white;
+
+				img {
+					width: 24px;
+					height: 24px;
+				}
+			}
+		}
+	}
+
+	&-category {
+		margin-bottom: 30px;
+		.btns-list {
+			display: flex;
+			gap: 30px;
+			align-items: center;
+
+			@media screen and (max-width: $lg) {
+				flex-wrap: nowrap;
+				max-width: 100%;
+				overflow-x: auto;
+				&::-webkit-scrollbar {
+					width: 0;
+				}
+			}
+			.btn-item {
+				display: flex;
+				padding: 14px 19px;
+				justify-content: center;
+				align-items: center;
+				gap: 5px;
+				border: none;
+				border-radius: 15px;
+				background: $grey;
+
+				@media screen and (max-width: $lg) {
+					padding: 8px 12px;
+					text-wrap: wrap;
+					min-width: 200px;
+				}
+
+				&.fire {
+					&::before {
+						content: url(./assets/svg/fire.svg);
+					}
+				}
+			}
+		}
+	}
+
+	.swiper-slide {
+		position: relative;
+		img {
+			@media screen and (max-width: $lg) {
+				width: 173px;
+				height: 260px;
+			}
+		}
+
+		.slide-title {
+			display: flex;
+			justify-content: space-between;
+			padding: 15px 20px;
+			position: absolute;
+			bottom: 15px;
+			left: 15px;
+			z-index: 100;
+			width: 97%;
+			height: 72px;
+			flex-shrink: 0;
+			align-items: center;
+
+			border-radius: 20px;
+			border: 1px solid $white;
+			background: rgba(244, 246, 248, 0.5);
+			backdrop-filter: blur(6px);
+			&::after {
+				content: url(./assets/svg/arrow.svg);
+			}
+
+			&__text {
+				display: flex;
+				align-items: flex-start;
+				flex-direction: column;
+				span {
+					color: $black;
+					font-family: Euclid Circular A;
+					font-size: 20px;
+					font-style: normal;
+					font-weight: 500;
+					line-height: 24px;
+				}
+				p {
+					color: $black;
+					opacity: 0.6;
+					font-family: Euclid Circular A;
+					font-size: 16px;
+					font-style: normal;
+					font-weight: 500;
+					line-height: 22.4px;
+				}
+			}
+
+			&__btn {
+				width: 30px;
+				height: 30px;
+			}
+		}
+	}
+}
+
+.popular-swiper .swiper-wrapper {
+	@media screen and (max-width: $sm) {
+		// flex-wrap: wrap;
+	}
+}
+
+.swiper-pagination {
+	display: none;
+	@media screen and (max-width: $sm) {
+		display: block;
+	}
+}
+
+.swiper-button-next {
+	@media screen and (max-width: $sm) {
+		display: none;
+	}
+}

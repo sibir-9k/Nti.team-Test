@@ -1,0 +1,185 @@
+@import './vars.scss';
+.sales {
+	margin-bottom: 152px;
+	&-header {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 60px;
+
+		&__title {
+			color: $black;
+			font-family: Euclid Circular A;
+			font-size: 50px;
+			font-style: normal;
+			font-weight: 500;
+			line-height: normal;
+			@media screen and (max-width: $sm) {
+				font-size: 32px;
+				line-height: 35.2px;
+			}
+		}
+
+		&__btn {
+			border: none;
+			color: $white;
+			font-family: Euclid Circular A;
+			font-size: 18px;
+			font-style: normal;
+			font-weight: 500;
+			line-height: 23.4px;
+
+			display: flex;
+			height: 60px;
+			padding: 5px 5px 5px 30px;
+			justify-content: center;
+			align-items: center;
+			gap: 25px;
+			border-radius: 15px;
+			background: linear-gradient(96deg, #dd3197 0%, #822faf 101.4%);
+			@media screen and (max-width: $sm) {
+				display: none;
+			}
+			&-arrow {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				width: 50px;
+				height: 50px;
+				flex-shrink: 0;
+
+				border-radius: 10px;
+				background: $white;
+
+				img {
+					width: 24px;
+					height: 24px;
+				}
+			}
+		}
+	}
+	&-product {
+		display: flex;
+		position: relative;
+		flex-direction: column;
+		align-items: center;
+		padding: 25px;
+		max-width: 375px;
+		height: 422px;
+		flex-shrink: 0;
+		background: url(./assets/svg/white-bg-product.svg) no-repeat;
+
+		&__image {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			position: relative;
+			width: 325px;
+			height: 214px;
+			padding: 15px;
+			flex-shrink: 0;
+			border-radius: 30px;
+			border: 2px solid $grey;
+			margin-bottom: 20px;
+
+			.sale {
+				position: absolute;
+				top: 15px;
+				left: 15px;
+				display: inline-flex;
+				padding: 6px 14px;
+				justify-content: center;
+				align-items: center;
+				gap: 10px;
+				border-radius: 15px;
+				background: $pink;
+				color: $white;
+				font-family: Euclid Circular A;
+				font-size: 16px;
+				font-style: normal;
+				font-weight: 500;
+				line-height: 22.4px;
+			}
+		}
+
+		&__title {
+			display: flex;
+			flex-direction: column;
+			width: 325px;
+			gap: 10px;
+			&-top {
+				overflow: hidden;
+				color: $black;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+				font-family: Euclid Circular A;
+				font-size: 20px;
+				font-style: normal;
+				font-weight: 500;
+				line-height: 24px;
+			}
+			&-bottom {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				width: 94px;
+				p {
+					overflow: hidden;
+					color: $dark-grey;
+					text-overflow: ellipsis;
+					font-family: Euclid Circular A;
+					font-size: 16px;
+					font-style: normal;
+					font-weight: 500;
+					line-height: 22.4px;
+				}
+
+				.dot {
+					width: 5px;
+					height: 5px;
+					border-radius: 50%;
+					background-color: $dark-grey;
+				}
+			}
+		}
+
+		&__price {
+			position: absolute;
+			bottom: 25px;
+			left: 25px;
+			&-new {
+				color: $black;
+				font-family: Euclid Circular A;
+				font-size: 24px;
+				font-style: normal;
+				font-weight: 600;
+				line-height: normal;
+			}
+
+			&-old {
+				color: $dark-grey;
+				font-family: Euclid Circular A;
+				font-size: 18px;
+				font-style: normal;
+				font-weight: 500;
+				line-height: 23.4px;
+			}
+		}
+
+		&__buy {
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			background-color: $pink;
+			border-radius: 50%;
+			width: 60px;
+			height: 60px;
+			flex-shrink: 0;
+			border: none;
+		}
+	}
+}
+
+.sales-swiper .swiper-wrapper {
+	border-radius: 32px;
+	background: #f0f0f09b;
+}

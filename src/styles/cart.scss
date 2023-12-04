@@ -1,0 +1,218 @@
+.cart {
+	position: absolute;
+	z-index: 6;
+	width: calc(100vw - 60px);
+	max-width: 768px;
+	right: 0;
+	top: 91px;
+	border-radius: 30px;
+	box-shadow: 5px 15px 70px 0px rgba(173, 178, 201, 0.35);
+	min-height: 774px;
+	background: #ffffff;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	overflow: hidden;
+	visibility: hidden;
+	opacity: 0;
+	transition: opacity 0.3s ease, visibility 0.3s ease;
+	@media screen and (max-width: $md) {
+		display: none;
+	}
+	&_active {
+		opacity: 1;
+		visibility: visible;
+	}
+	&__content {
+		padding: 30px 20px 30px 30px;
+		font-weight: 500;
+	}
+	&__title {
+		font-size: 24px;
+		font-weight: 600;
+	}
+	&__counter {
+		font-size: 18px;
+		font-weight: 500;
+		line-height: 1.3;
+		display: inline-block;
+		margin-left: 7px;
+	}
+	&__divider {
+		color: #dfdff0;
+		background-color: #dfdff0;
+		border: 0;
+		height: 1px;
+		margin: 25px 0 20px;
+	}
+	&__items {
+		margin-top: 25px;
+		padding-right: 20px;
+		border-right: 3px solid #dfdff0;
+	}
+	&__total {
+		background: #fff;
+		box-shadow: 5px 15px 70px 0px rgba(173, 178, 201, 0.35);
+		padding: 30px;
+	}
+	&__buttons {
+		display: flex;
+		margin-top: 20px;
+		width: 100%;
+		gap: 20px;
+	}
+	&__total-text {
+		display: block;
+		width: 100%;
+		text-align: right;
+		color: #9293b0;
+		font-size: 20px;
+		font-weight: 500;
+		line-height: 120%;
+	}
+	&__total-sum {
+		display: inline-block;
+		margin-left: 20px;
+		color: #3b3c40;
+		font-size: 24px;
+		font-weight: 600;
+	}
+	&__button {
+		border-radius: 15px;
+		padding: 5px 30px;
+		height: 60px;
+		position: relative;
+		font-size: 18px;
+		font-weight: 500;
+		line-height: 1.3;
+		flex-grow: 1;
+		&::after {
+			width: 50px;
+			height: 50px;
+			display: inline-flex;
+			justify-content: center;
+			align-items: center;
+			border-radius: 10px;
+			position: absolute;
+			top: 5px;
+			right: 5px;
+		}
+		&_to-cart {
+			border: 2px solid #dd3197;
+			background: #fff;
+			color: #dd3197;
+			&::after {
+				content: '';
+				top: 3px;
+				right: 3px;
+				background: url('./assets/svg/white-bag.svg') center no-repeat,
+					linear-gradient(96deg, #dd3197 0%, #822faf 101.4%);
+			}
+		}
+		&_one-click {
+			border: 0;
+			color: white;
+			background: var(--button-gradient, linear-gradient(96deg, #dd3197 0%, #822faf 101.4%));
+			&::after {
+				content: '';
+				background: white url('./assets/svg/arrow-right-pink.svg') center no-repeat;
+			}
+		}
+	}
+}
+
+.cart-item {
+	display: flex;
+	align-items: stretch;
+	justify-content: space-between;
+	border-top: 1px solid #dfdff0;
+	padding: 20px 0;
+	&:last-child {
+		border-bottom: 1px solid #dfdff0;
+	}
+	&__img {
+		width: 100px;
+		height: 100px;
+		object-fit: contain;
+		object-position: center;
+		border-radius: 20px;
+		border: 2px solid #f4f6f8;
+		background: #fff;
+		padding: 25px 15px 20px 15px;
+	}
+	&__title {
+		font-size: 18px;
+		font-weight: 500;
+		line-height: 1.3;
+	}
+	&__info {
+		margin-left: 15px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		margin-top: 9px;
+		margin-bottom: 7px;
+	}
+	&__total {
+		margin-left: 15px;
+		display: flex;
+		flex-direction: column;
+		text-align: right;
+		white-space: nowrap;
+		margin-top: 9px;
+		margin-bottom: 7px;
+	}
+	&__features {
+		display: flex;
+		justify-content: space-between;
+		margin-top: 15px;
+	}
+	&__price {
+		font-size: 20px;
+		font-weight: 500;
+		line-height: 1.2;
+		min-width: 75px;
+	}
+	&__discount {
+		color: #9293b0;
+		font-weight: 500;
+		line-height: 1.4;
+	}
+	&__feature {
+		min-width: 45px;
+	}
+	&__count {
+		margin-top: auto;
+	}
+	&__delete {
+		margin-top: 9px;
+		align-self: center;
+		border: 0;
+		background-color: transparent;
+		width: 24px;
+		height: 24px;
+		margin-left: 30px;
+		background: url('./assets/svg/trash.svg') center / auto no-repeat;
+	}
+	&__color {
+		display: flex;
+		column-gap: 5px;
+		&::before {
+			width: 20px;
+			height: 20px;
+			display: block;
+			content: '';
+			border-radius: 50%;
+		}
+		&_orange {
+			&::before {
+				background-color: #ed9039;
+			}
+		}
+		&_violet {
+			&::before {
+				background-color: #b5afde;
+			}
+		}
+	}
+}

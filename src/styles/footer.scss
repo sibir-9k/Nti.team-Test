@@ -1,0 +1,255 @@
+@import './vars.scss';
+.footer {
+	border-radius: 50px;
+	background: $grey;
+	padding: 60px 60px 0px 60px;
+	@media screen and (max-width: $sm) {
+		padding: 10px;
+		border-radius: 0;
+	}
+	&-top {
+		display: flex;
+		justify-content: space-between;
+		padding-bottom: 50px;
+		@media screen and (max-width: $sm) {
+			flex-direction: row-reverse;
+		}
+
+		&__info {
+			.info-top {
+				display: flex;
+				justify-content: space-between;
+				margin-bottom: 58px;
+				height: 100%;
+				@media screen and (max-width: $sm) {
+					flex-direction: row-reverse;
+				}
+
+				&__logo-write {
+					display: flex;
+					flex-direction: column;
+					margin-right: 56px;
+					justify-content: space-between;
+
+					img {
+						width: 80px;
+						height: 80px;
+					}
+
+					@media screen and (max-width: $sm) {
+						display: none;
+					}
+
+					.write {
+						display: flex;
+						height: 50px;
+						padding: 19px 30px;
+						justify-content: center;
+						align-items: center;
+						gap: 10px;
+						flex-shrink: 0;
+						border-radius: 15px;
+						border: 1px solid var(--dark-grey, $dark-grey);
+						box-shadow: 10px 15px 50px 0px rgba(173, 178, 201, 0.2);
+
+						color: $black;
+						font-family: Euclid Circular A;
+						font-size: 16px;
+						font-style: normal;
+						font-weight: 500;
+						line-height: 22.4px;
+					}
+				}
+
+				&__contact {
+					display: flex;
+					flex-direction: column;
+					gap: 30px;
+					justify-content: space-between;
+					@media screen and (max-width: $sm) {
+						gap: 24px;
+					}
+
+					.contact {
+						display: flex;
+						flex-direction: column;
+						gap: 30px;
+					}
+
+					&-phone {
+						display: flex;
+						flex-direction: column;
+						gap: 15px;
+						@media screen and (max-width: $sm) {
+							gap: 12px;
+						}
+
+						span {
+							color: $black;
+							font-family: Euclid Circular A;
+							font-size: 20px;
+							font-style: normal;
+							font-weight: 500;
+							line-height: 24px;
+						}
+
+						a {
+							color: $dark-grey;
+							font-family: Euclid Circular A;
+							font-size: 16px;
+							font-style: normal;
+							font-weight: 500;
+							line-height: 22.4px;
+						}
+					}
+
+					&-email {
+						display: flex;
+						flex-direction: column;
+						gap: 15px;
+						min-width: 192px;
+
+						span {
+							color: $black;
+							font-family: Euclid Circular A;
+							font-size: 20px;
+							font-style: normal;
+							font-weight: 500;
+							line-height: 24px;
+						}
+
+						a {
+							color: $dark-grey;
+							font-family: Euclid Circular A;
+							font-size: 16px;
+							font-style: normal;
+							font-weight: 500;
+							line-height: 22.4px;
+						}
+					}
+				}
+
+				&__contact-socials {
+					display: flex;
+					gap: 15px;
+				}
+
+				.cards-pay {
+					margin-bottom: 10px;
+				}
+			}
+			.info-bottom {
+				display: flex;
+				align-items: flex-start;
+				flex-direction: column;
+				gap: 30px;
+				@media screen and (max-width: $sm) {
+					flex-direction: column-reverse;
+				}
+
+				&__stars {
+					display: flex;
+					flex-direction: column;
+					.stars {
+						display: flex;
+						align-items: center;
+						gap: 16px;
+
+						color: $black;
+						font-family: Euclid Circular A;
+						font-size: 20px;
+						font-style: normal;
+						font-weight: 500;
+						line-height: 24px;
+						&::before {
+							content: url(./assets/svg/pink-star.svg);
+						}
+					}
+				}
+
+				&__cards-pay {
+					display: flex;
+					gap: 50px;
+					align-items: center;
+					@media screen and (max-width: $sm) {
+						flex-direction: column-reverse;
+					}
+
+					img {
+						width: 100%;
+						height: 100%;
+					}
+				}
+			}
+		}
+
+		&__about,
+		&__catalog {
+			display: flex;
+			flex-direction: column;
+			gap: 15px;
+
+			.about__title {
+				color: $black;
+				font-family: Euclid Circular A;
+				font-size: 20px;
+				font-style: normal;
+				font-weight: 500;
+				line-height: 24px;
+			}
+
+			.catalog__title {
+				color: $black;
+				font-family: Euclid Circular A;
+				font-size: 20px;
+				font-style: normal;
+				font-weight: 500;
+				line-height: 24px;
+			}
+
+			.footer-top__list {
+				display: flex;
+				flex-direction: column;
+				flex-wrap: wrap;
+				gap: 12px;
+				&-item {
+					color: $dark-grey;
+					font-family: Euclid Circular A;
+					font-size: 16px;
+					font-style: normal;
+					font-weight: 500;
+					line-height: 22.4px;
+				}
+			}
+		}
+
+		&__catalog {
+			display: flex;
+			flex-direction: column;
+			flex-wrap: wrap;
+			@media screen and (max-width: $sm) {
+				display: none;
+			}
+		}
+	}
+
+	&-bottom {
+		padding: 25px 0;
+		@media screen and (max-width: $sm) {
+			text-align: center;
+		}
+		.copyright {
+			color: $dark-grey;
+			font-family: Euclid Circular A;
+			font-size: 16px;
+			font-style: normal;
+			font-weight: 500;
+			line-height: 22.4px;
+		}
+	}
+}
+
+.catalog__lists {
+	display: flex;
+	gap: 30px;
+}

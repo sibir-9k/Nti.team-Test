@@ -1,0 +1,27 @@
+.swiper {
+	position: relative;
+  width: 100%;
+}
+
+.swiper-button-next {
+	width: 40px;
+	height: 40px;
+	flex-shrink: 0;
+	border-radius: 50%;
+	background-color: white;
+	box-shadow: (3px 6px 14px rgba(0, 0, 0, 0.15));
+}
+
+.swiper-button-next:after,
+.swiper-rtl .swiper-button-prev:after {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 40px;
+	height: 40px;
+	content: url(./assets/svg/arrow-right-swiper.svg);
+
+	position: absolute;
+	bottom: 4px;
+}
