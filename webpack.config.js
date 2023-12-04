@@ -5,7 +5,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 module.exports = {
 	entry: './src/index.js',
 	output: {
-		path: path.resolve(__dirname, 'dist'),
+		path: path.resolve(__dirname, 'public'),
 		filename: 'bundle.js',
 		clean: true,
 		assetModuleFilename: 'assets/[name][ext]',
@@ -68,7 +68,7 @@ module.exports = {
 	devtool: 'inline-source-map',
 	devServer: {
 		static: {
-			directory: path.join(__dirname, 'dist'),
+			directory: path.join(__dirname, 'public'),
 		},
 		open: true,
 	},
