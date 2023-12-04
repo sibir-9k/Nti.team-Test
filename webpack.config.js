@@ -68,10 +68,10 @@ module.exports = {
 	devtool: 'inline-source-map',
 	devServer: {
 		static: {
-			directory: path.join(__dirname, 'dist'), // Каталог, откуда будет раздаваться статика
+			directory: path.join(__dirname, 'dist'),
 		},
-		open: true, // Автоматически открывать браузер после запуска сервера разработки
+		open: true,
 	},
 
-	mode: 'development', // Режим сборки (в данном случае - разработка)
+	mode: 'development',
 };

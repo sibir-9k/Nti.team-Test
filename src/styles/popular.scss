@@ -96,6 +96,11 @@
 						content: url(./assets/svg/fire.svg);
 					}
 				}
+
+				&.active {
+					background-color: $pink;
+					color: $white;
+				}
 			}
 		}
 	}

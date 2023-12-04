@@ -16,19 +16,18 @@
 		}
 		.promo-main {
 			position: relative;
-			padding: 50px;
-			max-width: 690px;
+			width: 90%;
 			height: 422px;
-			background: url('./assets/svg/promo-bg.svg') no-repeat;
-
+			background: url('./assets/png/promo-bg-desktop.png') no-repeat;
 			@media screen and (max-width: $sm) {
-				// background: url('./assets/svg/banner.png') no-repeat;
+				background: url('./assets/png/promo-bg.png') no-repeat;
 				height: 100%;
 			}
 
 			&__sale {
-				position: relative;
-				top: -350px;
+				position: absolute;
+				bottom: 115px;
+				left: 50px;
 				z-index: 3;
 				@media screen and (max-width: $sm) {
 					display: none;
@@ -42,13 +41,6 @@
 					font-weight: 600;
 					line-height: normal;
 				}
-			}
-
-			&__image {
-				position: relative;
-				top: -50px;
-				right: 50px;
-				z-index: 2;
 			}
 
 			&__open-promo {
@@ -89,7 +81,7 @@
 				justify-content: center;
 				align-items: center;
 				position: relative;
-				max-width: 325px;
+				width: 325px;
 				height: 214px;
 				padding: 15px;
 				flex-shrink: 0;
@@ -110,8 +102,6 @@
 					background: $pink;
 
 					color: $white;
-
-					/* text 16 medium */
 					font-family: Euclid Circular A;
 					font-size: 16px;
 					font-style: normal;
@@ -242,6 +232,7 @@
 		display: flex;
 		gap: 20px;
 		flex-wrap: wrap;
+		justify-content: space-between;
 
 		@media screen and (max-width: $sm) {
 			flex-direction: column;
@@ -250,10 +241,10 @@
 			display: flex;
 			justify-content: space-between;
 			border-radius: 20px;
-			background-color: $purple-light;
 			height: 196px;
 			flex-shrink: 0;
 			padding: 40px 30px;
+			background: url(./assets/png/Mask\ group.png) $purple-light center left;
 
 			@media screen and (max-width: $sm) {
 				width: 100%;
@@ -279,6 +270,7 @@
 				background: url(./assets/svg/bg-image-promo-bottom.svg) no-repeat;
 			}
 			&-text {
+				margin-left: 80px;
 				.card-title {
 					color: $black;
 					font-family: Euclid Circular A;
