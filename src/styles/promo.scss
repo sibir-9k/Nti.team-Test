@@ -17,6 +17,7 @@
 			flex-direction: column;
 			padding: 10px;
 			margin-bottom: 30px;
+      border-radius: 15px;
 		}
 		.promo-main {
 			position: relative;
@@ -305,6 +306,9 @@
 					font-style: normal;
 					font-weight: 600;
 					line-height: normal;
+					@media screen and (max-width: $sm) {
+						font-size: 19px;
+					}
 				}
 				.card-paragraf {
 					color: $dark-grey;
