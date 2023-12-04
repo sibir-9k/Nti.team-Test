@@ -2,6 +2,9 @@
 
 .promo {
 	margin-bottom: 150px;
+	@media screen and (max-width: $md) {
+		margin-bottom: 88px;
+	}
 	.promo-top {
 		border-radius: 50px;
 		background: $purple-light;
@@ -13,6 +16,7 @@
 			display: flex;
 			flex-direction: column;
 			padding: 10px;
+			margin-bottom: 30px;
 		}
 		.promo-main {
 			position: relative;
@@ -21,7 +25,8 @@
 			background: url('./assets/png/promo-bg-desktop.png') no-repeat;
 			@media screen and (max-width: $sm) {
 				background: url('./assets/png/promo-bg.png') no-repeat;
-				height: 100%;
+				width: 100%;
+				height: 295px;
 			}
 
 			&__sale {
@@ -30,7 +35,8 @@
 				left: 50px;
 				z-index: 3;
 				@media screen and (max-width: $sm) {
-					display: none;
+					bottom: 22px;
+					left: 20px;
 				}
 
 				&-text {
@@ -40,6 +46,11 @@
 					font-style: normal;
 					font-weight: 600;
 					line-height: normal;
+
+					@media screen and (max-width: $sm) {
+						font-size: 18px;
+						font-weight: 600;
+					}
 				}
 			}
 
@@ -55,9 +66,18 @@
 				border: none;
 				z-index: 100;
 
+				@media screen and (max-width: $sm) {
+					width: 40px;
+					height: 40px;
+					bottom: 0;
+				}
 				img {
 					width: 48px;
 					height: 48px;
+					@media screen and (max-width: $sm) {
+						width: 28px;
+						height: 28px;
+					}
 				}
 			}
 		}
@@ -88,6 +108,10 @@
 				border-radius: 30px;
 				border: 2px solid $grey;
 				margin-bottom: 20px;
+
+				@media screen and (max-width: $sm) {
+					width: 100%;
+				}
 
 				.sale {
 					position: absolute;
@@ -271,6 +295,9 @@
 			}
 			&-text {
 				margin-left: 80px;
+				@media screen and (max-width: $sm) {
+					margin-left: 28px;
+				}
 				.card-title {
 					color: $black;
 					font-family: Euclid Circular A;

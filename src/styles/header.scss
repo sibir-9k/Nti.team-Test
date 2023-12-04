@@ -2,6 +2,10 @@
 
 header {
 	margin-bottom: 92px;
+	@media screen and (max-width: $md) {
+		margin-bottom: 46px;
+	}
+
 	.header-top {
 		padding: 13px 0 13px;
 		background: #f4f6f8;

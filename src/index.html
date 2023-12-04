@@ -633,15 +633,15 @@
             <p class="form-right__title-paragraf">Оставьте свои данные, и мы перезвоним вам в ближайшее время</p>
           </div>
           <form class="form-right__block">
-            <input class="form-right__block-input name" type="text" placeholder="Ваше имя">
-            <input class="form-right__block-input tel" type="text" placeholder="Номер телефона">
+            <input class="form-right__block-input name" id="input-name" type="text" minlength="2" placeholder="Ваше имя" required>
+            <input class="form-right__block-input tel" id="input-phone" type="text" pattern="^\+7[1-9]{10}$" placeholder="Номер телефона" required>
             <div class="form-right__block-bottom">
               <p class="form-right__block-bottom-text">Нажимая на кнопку «Отправить», Вы <br> принимаете условия
                 <span>
                   Соглашения
                 </span>
               </p>
-              <button class="form-right__block-bottom-btn">
+              <button class="form-right__block-bottom-btn" id="submit">
                 Отправить
                 <div class="form-right__block-bottom-btn-arrow">
                   <img src="./assets/svg/arrow-right-pink.svg" alt="">

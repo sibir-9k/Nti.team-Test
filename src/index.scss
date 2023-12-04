@@ -8,6 +8,7 @@
 @import './styles/form.scss';
 @import './styles/vars.scss';
 @import './styles/cart.scss';
+@import './styles/modal.scss';
 
 * {
 	margin: 0;
@@ -48,6 +49,6 @@ input {
 		padding: 0 20px;
 	}
 	@media screen and (max-width: $sm) {
-		padding: 0;
+		padding: 0px 5px;
 	}
 }

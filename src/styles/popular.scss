@@ -1,10 +1,16 @@
 @import './vars.scss';
 .popular {
 	margin-bottom: 152px;
+	@media screen and (max-width: $md) {
+		margin-bottom: 88px;
+	}
 	&-header {
 		display: flex;
 		justify-content: space-between;
 		margin-bottom: 60px;
+    @media screen and (max-width: $md) {
+			margin-bottom: 30px;
+		}
 		&__title {
 			color: $black;
 			font-family: Euclid Circular A;
@@ -62,6 +68,9 @@
 
 	&-category {
 		margin-bottom: 30px;
+    @media screen and (max-width: $md) {
+			margin-bottom: 20px;
+		}
 		.btns-list {
 			display: flex;
 			gap: 30px;

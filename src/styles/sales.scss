@@ -5,6 +5,9 @@
 		display: flex;
 		justify-content: space-between;
 		margin-bottom: 60px;
+    @media screen and (max-width: $md) {
+			margin-bottom: 30px;
+		}
 
 		&__title {
 			color: $black;
